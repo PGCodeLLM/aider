@@ -710,6 +710,7 @@ def run_test_real(
     testdir = Path(testdir)
 
     history_fname = testdir / ".aider.chat.history.md"
+    llm_history_fname = testdir / ".aider.llm.history.log"
 
     results_fname = testdir / ".aider.results.json"
     if results_fname.exists():
@@ -795,6 +796,7 @@ def run_test_real(
         pretty=False,
         yes=True,
         chat_history_file=history_fname,
+        llm_history_file=llm_history_fname,
     )
 
     # weak_model_name = model_name
