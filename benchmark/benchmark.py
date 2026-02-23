@@ -375,7 +375,7 @@ def main(
                 sleep,
                 reasoning_effort,
                 thinking_tokens,
-                stream,
+                stream=stream,
             )
 
             all_results.append(results)
@@ -402,7 +402,7 @@ def main(
                 sleep,
                 reasoning_effort,
                 thinking_tokens,
-                stream,
+                stream=stream,
             )
         all_results = run_test_threaded.gather(tqdm=True)
 
